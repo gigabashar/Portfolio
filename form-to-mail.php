@@ -22,7 +22,10 @@ $to = "basharuligiga@gmail.com";
 $headers = "From: $email_from \r\n";
 
 //Send the email!
-mail($to,$email_subject,$email_body,$headers);
+mail($to,$email_subject,$email_body,$headers)
+or die ("Error");
+
+echo "Message sent";
 
 
 ?>
