@@ -104,7 +104,7 @@ textarea {
   top: calc(100% + 1.5rem);
   height: 5px;
   width: 3rem;
-  background: rgba(226, 24, 24, 0.73);
+  background: rgba(24 226 30 / 73%);
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
@@ -152,6 +152,7 @@ textarea {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
   transition: transform 0.3s;
+  z-index: 100;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -165,13 +166,13 @@ textarea {
   font-size: 1.6rem;
 }
 .btn--theme {
-  background: rgba(226, 24, 24, 0.73);
+  background: rgba(24 226 30 / 73%);
   color: #fff;
 }
 .btn--theme-inv {
-  color: rgba(226, 24, 24, 0.73);
+  color: rgba(24 226 30 / 73%);
   background: #fff;
-  border: 2px solid rgba(226, 24, 24, 0.73);
+  border: 2px solid rgba(24 226 30 / 73%);
   box-shadow: none;
   padding: calc(1.5rem - 2px) calc(5rem - 2px);
 }
@@ -202,7 +203,7 @@ textarea {
   color: #fff;
   background: linear-gradient(
       to right,
-      rgba(226, 24, 24, 0.73),
+      rgb(24 226 30 / 73%),
       rgba(38, 43, 19, 0.8)
     ),
     url(../../assets/svg/common-bg.svg);
@@ -323,10 +324,11 @@ textarea {
   margin-bottom: 4rem;
 }
 .projects__row {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  grid-gap: 5rem;
-  margin-bottom: 11rem;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 10rem;
+  flex: 0 0 50%;
 }
 @media only screen and (max-width: 56.25em) {
   .projects__row {
@@ -348,7 +350,7 @@ textarea {
   transition: 1s;
 }
 .projects__row-img-cont:hover {
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
 }
 .projects__row-img {
   width: 100%;
@@ -360,8 +362,8 @@ textarea {
 }
 .project-image {
   position: absolute;
-  width: 70.7%;
-  height: 73.5%;
+  width: 70.9%;
+  height: 73.6%;
   top: 10.71%;
   left: 14.8%;
   cursor: pointer;
@@ -370,8 +372,8 @@ textarea {
 }
 .project-image-2 {
   position: absolute;
-  width: 70.7%;
-  height: 73.5%;
+  width: 70.9%;
+  height: 73.6%;
   top: 10.71%;
   left: 14.8%;
   cursor: pointer;
@@ -383,11 +385,11 @@ textarea {
   height: 74.5%;
 }
 .projects__row-content {
-  padding: 2rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  z-index: 100;
 }
 @media only screen and (max-width: 56.25em) {
   .projects__row-content {
@@ -407,9 +409,13 @@ textarea {
 .projects__row-content-desc {
   font-size: 1.8rem;
   color: grey;
-  max-width: 60rem;
   line-height: 1.7;
   margin-bottom: 3rem;
+  text-align: center;
+}
+.projects__content {
+  display: flex;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 37.5em) {
   .projects__row-content-desc {
@@ -419,7 +425,7 @@ textarea {
 .contact {
   background: linear-gradient(
       to right,
-      rgba(226, 24, 24, 0.73),
+      rgba(24 226 30 / 73%),
       rgba(38, 43, 19, 0.8)
     ),
     url(../../assets/svg/common-bg.svg);
@@ -526,7 +532,7 @@ textarea {
   color: #fff;
   background: linear-gradient(
       to right,
-      rgba(226, 24, 24, 0.73),
+      rgba(24 226 30 / 73%),
       rgba(38, 43, 19, 0.8)
     ),
     url(../../assets/svg/common-bg.svg);
@@ -673,7 +679,7 @@ textarea {
   transition: color 0.3s;
 }
 .header__logo-container:hover {
-  color: rgba(226, 24, 24, 0.73);
+  color: rgba(24 226 30 / 73%);
 }
 .header__logo-img-cont {
   width: 5rem;
@@ -681,7 +687,7 @@ textarea {
   border-radius: 50px;
   overflow: hidden;
   margin-right: 1.5rem;
-  background: rgba(226, 24, 24, 0.73);
+  background: rgba(24 226 30 / 73%);
 }
 @media only screen and (max-width: 56.25em) {
   .header__logo-img-cont {
@@ -725,7 +731,7 @@ textarea {
   transition: color 0.3s;
 }
 .header__link:hover {
-  color: rgba(226, 24, 24, 0.73);
+  color: rgba(24 226 30 / 73%);
 }
 @media only screen and (max-width: 56.25em) {
   .header__link {
@@ -785,7 +791,7 @@ textarea {
   transition: color 0.3s;
 }
 .header__sm-menu-link a:hover {
-  color: rgba(226, 24, 24, 0.73);
+  color: rgba(24 226 30 / 73%);
 }
 .header__sm-menu-link:first-child a {
   border-top: 1px solid #eee;
